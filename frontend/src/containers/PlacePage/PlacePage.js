@@ -85,7 +85,7 @@ const PlacePage = ({match}) => {
               </Grid>
               <Grid item container xs={8}>
                 <Rating readOnly value={Math.round(overall)}/>
-                <Box ml={4}>{labels[Math.round(overall)]}</Box>
+                <Box id='overall' ml={4}>{labels[Math.round(overall)]}</Box>
               </Grid>
             </Grid>
             {place.totalScores&&Object.keys(place.totalScores).map(el => (

@@ -53,6 +53,7 @@ export const loginUser = (userData) => {
       dispatch(loginUserRequest());
       const response = await axiosApi.post("/users/sessions", userData);
       dispatch(loginUserSuccess(response.data));
+      toast.success("Logged in successfully");
       dispatch(push("/"));
     } catch (error) {
       dispatch(loginUserFailure(error.response.data));
